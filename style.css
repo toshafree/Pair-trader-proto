@@ -1,0 +1,28 @@
+.chart {
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+}
+.tmRect {
+    pointer-events: all;
+    cursor: pointer;
+    stroke: #aaa;
+    stroke-width: 1;
+    stroke-opacity: 0.75
+}
+.tmheaderBackground{
+    fill: #333355;
+}
+
+text {
+    font-size: 11px;
+    fill: white;
+}
+
+.tmlabel{
+    fill: White;
+}
+
+rect {
+    fill: none;
+}

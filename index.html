@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Pairs trader</title>
-
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/siimple@3.3.1/dist/siimple.min.css">
 </head>
 <body>
-<script async src="//jsfiddle.net/ue8zm1y6/164/embed/result/"></script>
+<div id="body">
+    <div class="siimple-content siimple-content--fluid">
+        <div class="siimple-grid">
+            <div class="siimple-grid-row">
+                <div class="siimple-grid-col siimple-grid-col--2">
+                    <h2>Pair traider</h2>
+                    <div class="siimple-form">
+                        <div class="siimple-form-field">
+                            <label class="siimple-label">Size </label>
+                            <select id="select-size" class="siimple-select siimple-select--fluid">
+                                <option value="volume">Volume - liquidity</option>
+                                <option value="profit">Profit size</option>
+                            </select>
+                        </div>
+                        <div class="siimple-form-field">
+                            <label class="siimple-label">Color</label>
+                            <select id="select-color" class="siimple-select siimple-select--fluid">
+                                <option value="profit">Profit</option>
+                                <option value="volume">Volume - liquidity</option>
+                                <option value="pvalue">Correlation</option>
+                                <option value="maturity">Maturity</option>
+                            </select>
+                        </div>
+                        <div class="siimple-form-field">
+                            <label class="siimple-label">Filter timeframe</label>
+                            <select id="select-timeframe" class="siimple-select siimple-select--fluid">
+                                <option value="any">Any</option>
+                                <option value="minutes">Minutes</option>
+                                <option value="hours">Hours</option>
+                                <option value="days">Days</option>
+                            </select>
+                        </div>
+                        <div class="siimple-form-field">
+                            <label class="siimple-label">Correlation's degree</label>
+                            <select id="select-correlation" class="siimple-select siimple-select--fluid">
+                                <option value="any">Any</option>
+                                <option value="exellent">Exellent</option>
+                                <option value="high">High</option>
+                                <option value="moderate">Moderate</option>
+                            </select>
+                        </div>
+                        <div class="siimple-form-field">
+                            <label class="siimple-label">Group by</label>
+                            <select id="select-groupby" class="siimple-select siimple-select--fluid">
+                                <option value="category">Category</option>
+                                <option value="correlation">Correlation</option>
+                                <option value="timeframe">Timeframe</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="chart" class="siimple-grid-col siimple-grid-col--10"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
 </body>
 </html>
