@@ -6,21 +6,24 @@
 .tmRect {
     pointer-events: all;
     cursor: pointer;
-    stroke: #aaa;
+    stroke: #222222;
     stroke-width: 1;
     stroke-opacity: 0.75
 }
 .tmheaderBackground{
-    fill: #333355;
+    fill: #0f3b07;
 }
 
 text {
     font-size: 11px;
     fill: white;
+    font-weight: bold;
 }
 
 .tmlabel{
     fill: White;
+    text-transform: uppercase;
+    font-size: 10px;
 }
 
 rect {
