@@ -4,8 +4,8 @@ var w = 1280 - 80,
     y = d3.scale.linear().range([0, h]),
     color = d3.scale.category20c(),
     profitColorScale = d3.scale.linear()
-        .range(['#888899', 'darkgreen']) // or use hex values
-        .domain([0.03, 0.08]),
+        .range(['#3e4c37','#2C6700','#8ABF1A']) // or use hex values
+        .domain([0.03,0.055,0.08]),
     volumeColorScale = d3.scale.linear()
         .range(['#888899', 'darkgreen']) // or use hex values
         .domain([0, 100]),
@@ -59,7 +59,7 @@ function getData() {
         children.push({name: key, children: groupedChildren[key]})
     }
     console.log("ChangeData", groupby)
-    root = {name: "Pairs"+Math.random()*10, children: children }
+    root = {name: "Pairs", children: children }
     //svg.datum(data).call(UpdateTreeMap)
     UpdateTreeMap()
 
@@ -123,7 +123,7 @@ function UpdateTreeMap() {
 
     parentCells.append('text')
         .attr("class", "tmlabel")
-        .attr("transform", "translate(3, 13)")
+        .attr("transform", "translate(5, 11)")
         .attr("width", function(d) {
             return Math.max(0.01, d.dx);
         })
